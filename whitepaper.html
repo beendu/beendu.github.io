@@ -22,17 +22,7 @@
 <body>
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo"></a>
-            <!--
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Navbar Link</a></li>
-            </ul>
-
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="#">Navbar Link</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-            -->
+            <a id="logo-container" href="#" class="brand-logo"></a>           
         </div>
     </nav>
     <div class="container">
@@ -56,46 +46,24 @@
                     ipv6_addr = "fd00"+ lsb(sha1(public_key), 112)
                 </p>
                 <h2>Packet router</h2>
-                The packet router is a usermode service that is attached to the
-                tun interface. When a packet is arrived to the service it looks 
-                at the ipv6 packet header gets the destination address and route 
-                the packet to appropriate node.               
-
+                <p>
+                    The packet router is a usermode service that is attached to the
+                    tun interface. When a packet is arrived to the service it looks
+                    at the ipv6 packet header gets the destination address and route
+                    the packet to appropriate node.
+                </p>
+                <h2>DNS Server</h2>
+                <p>
+                    The dns servers calculate the ipv6 address from the beendu address and
+                    return the dns response for any request.
+                </p>
             </div>
 
         </div>
         <br><br>
     </div>
 
-    <footer class="page-footer orange">
-        <!--div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Company Bio</h5>
-                    <p class="grey-text text-lighten-4"></p>
-
-
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Settings</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div-->
+    <footer class="page-footer orange">        
         <div class="footer-copyright">
             <div class="container">
                 beendu
