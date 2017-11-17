@@ -39,10 +39,28 @@
         <div class="section">
             
             <div class="row">
-              <h1>White paper</h1>
-              
-              <h2>Network request flow</h2>
-              <img src="netflow.tiff" />
+              <h1>White paper</h1>              
+                            
+            </div>
+            <div class="row">
+                <h2>Network request flow</h2>
+                <img src="images/netflow.png" />
+                <p>
+                    A tun interface is created on each beendu node. 
+                    The interface is assigned a IPv6 address based on 
+                    the full beendu address of the node. The beendu address is 
+                    the public key part of the node. We calculate sha1 hash and 
+                    take least significant 112 bits and add fd00 to form the ipv6 
+                    address of the node.<br />
+
+                    ipv6_addr = "fd00"+ lsb(sha1(public_key), 112)
+                </p>
+                <h2>Packet router</h2>
+                The packet router is a usermode service that is attached to the
+                tun interface. When a packet is arrived to the service it looks 
+                at the ipv6 packet header gets the destination address and route 
+                the packet to appropriate node.               
+
             </div>
 
         </div>
